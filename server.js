@@ -35,6 +35,9 @@ app.use("/api/predictions", predictionRoutes);
 app.use("/api/alerts", alertRoutes);
 app.use("/api/panchayat", panchayatRoutes);
 app.use("/api/reports", reportRoutes);
+app.get("/",(req,res)=>{
+  res.send("Server is running")
+})
 
 mongoose.connect(MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
