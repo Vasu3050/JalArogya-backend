@@ -34,6 +34,8 @@ app.use("/api/predictions", predictionRoutes);
 app.use("/api/alerts", alertRoutes);
 app.use("/api/panchayat", panchayatRoutes);
 app.use("/api/reports", reportRoutes);
+// Backward/Frontend-compatible alias (same router, different mount path)
+app.use("/api/panchayat/reports", reportRoutes);
 app.get("/",(req,res)=>{
   res.send("Server is running")
 })
